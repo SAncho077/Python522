@@ -2685,10 +2685,12 @@ from imaplib import IMAP4_PORT
 #
 # remove_empty_dirs("nested1")
 
-import os.path
+# import os.path
+#
+# print(os.path.split(r"C:\python top\pythonProject"))
+# print(os.path.join("C:\python top", "pythonProject"))
+# print(os.path.exists(r"C:\python top\pythonProject"))
+# print(os.path.isfile(r"C:\python top\pythonProject"))
+# print(os.path.isdir(r"C:\python top\pythonProject"))
 
-print(os.path.split(r"C:\python top\pythonProject"))
-print(os.path.join("C:\python top", "pythonProject"))
-print(os.path.exists(r"C:\python top\pythonProject"))
-print(os.path.isfile(r"C:\python top\pythonProject"))
-print(os.path.isdir(r"C:\python top\pythonProject"))
+print("Данные в локальном репозитории")
