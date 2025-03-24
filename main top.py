@@ -2694,3 +2694,5 @@ from imaplib import IMAP4_PORT
 # print(os.path.isdir(r"C:\python top\pythonProject"))
 
 print("Данные в локальном репозитории")
+print("Работа в гитхабе")
+print("wfwf")
