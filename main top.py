@@ -2656,7 +2656,7 @@
 # Модули OS и OS.PATH
 
 import os
-from imaplib import IMAP4_PORT
+
 
 # print(os.getcwd()) # путь к текущей директории
 #
@@ -2692,7 +2692,82 @@ from imaplib import IMAP4_PORT
 # print(os.path.exists(r"C:\python top\pythonProject"))
 # print(os.path.isfile(r"C:\python top\pythonProject"))
 # print(os.path.isdir(r"C:\python top\pythonProject"))
+#
 
-print("Данные в локальном репозитории")
-print("Работа в гитхабе")
-print("wfwf")
+# import os
+#
+# dirs = [r'Work\F1', r'Work\F2\F21']
+
+# for d in dirs:
+#     os.makedirs(d)
+
+# files = {
+#     'Work': ['w.txt'],
+#     r'Work\F1': ['f11.txt', 'f12.txt', 'f13.txt'],
+#     r'Work\F2\F21': ['f221.txt', 'f212.txt']
+# }
+
+# for key, value in files.items():
+#     for file in value:
+#         file_path = os.path.join(key, file)
+#         print(os.path.join(key, file))
+#         open(file_path, 'w').close()
+
+# file_with_text = [r'Work\w.txt', r'Work\F1\f12.txt', r'Work\F2\F21\f211.txt',
+#                   r'Work\F2\F21\f212.txt']
+
+# for file in file_with_text:
+#     with open(file, 'w') as f:
+#         f.write(f"Некоторый текст для файла {file}")
+
+# def print_tree(topdown):
+#     print(f"Обход Work {'сверху вниз' if topdown else 'снизу вверх'}")
+#     for root, directory, file in os.walk("Work", topdown):
+#         print(root)
+#         print(directory)
+#         print(file)
+#     print("-" * 50)
+# print_tree(False)
+# print_tree(True)
+
+# import os
+# import time
+#
+# path = "readme.md"
+# print(os.path.getsize(path)) # размер файла
+# print(os.path.getatime(path)) # время последнего доступа к файлу
+# print(os.path.getmtime(path)) #время последнего изменения файла
+# print(os.path.getctime(path)) # время создания файла
+#
+# size = os.path.getsize(path)
+# a_time = os.path.getsize(path)
+# m_time = os.path.getmtime(path)
+# c_time = os.path.getctime(path)
+#
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(a_time)))
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(m_time)))
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(c_time)))
+# print(size)
+# print(size // 1024)
+
+# import os
+#
+# file_path = r"E:\Python522\nested1\text2.txt"
+# if os.path.exists(file_path):
+#     directory, file = os.path.split(file_path)
+#     atime = os.path.getatime(file_path)
+#     print(f"{file} ({directory})" - {atime})
+# else:
+#     print(f"Файл {file_path} не существует")
+
+import os
+
+dir_name = "Work"
+objs = os.listdir(dir_name)
+
+for obj in objs:
+    p = os.path.join(dir_name, obj)
+    if os.path.isfile(p):
+        print(f"{obj} - file - {os.path.getsize(p)} bytes")
+    if os.path.isdir(obj):
+        print(f"{obj} - dir")
