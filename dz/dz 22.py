@@ -1,6 +1,3 @@
-from tkinter.font import names
-
-
 class Car:
 
     def __init__(self, name, age, proiz, mosh, color, cena):
