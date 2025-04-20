@@ -2643,7 +2643,8 @@
 # #         return res[0] if len(res) == 1 else res
 # # print(longest_word(file_name))
 #
-# text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\nСтрока №8\nСтрока №9\nСтрока №10\n"
+# text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\nСтрока №8\nСтрока №9
+# \nСтрока №10\n"
 # # with open("one.txt", "w") as f:
 # #     f.write(text)
 # #
@@ -2674,7 +2675,8 @@
 #
 # # os.rename("file_name", "file_name.txt")
 # # os.rename("file_name.txt", "new_file.txt") # переименовывает файл, может его перемещать в существующую директорию
-# # os.renames("two.txt", "test/two.txt") # переименовывает файл, может создавать директории, которых не существует при перемещении
+# # os.renames("two.txt", "test/two.txt") # переименовывает файл, может создавать директории, которых не существует
+# при перемещении
 # # for root, dirs, files in os.walk("nested1"):
 # #     print("Root:", root)
 # #     print("\tDirs:", dirs)
@@ -3714,28 +3716,346 @@
 
 # Интерфейс
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
+#
+# class Father(ABC):
+#     @abstractmethod
+#     def display1(self):
+#         pass
+#
+#     @abstractmethod
+#     def display2(self):
+#         pass
+#
+#
+# class Child(Father):
+#     def display1(self):
+#         print("Child Class")
+#
+#
+# class GrandChild(Child):
+#     def display2(self):
+#         print("GrandChild Class")
+#
+#
+# gc = GrandChild
+# gc.display1()
+# gc.display2()
 
-class Father(ABC):
-    @abstractmethod
-    def display1(self):
-        pass
+# Вложенные классы
 
-    @abstractmethod
-    def display2(self):
-        pass
+# class MyOuter:
+#     age = 18
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#
+#     @staticmethod
+#     def outer_static_metod():
+#         print("Метод внешнего класса")
+#
+#     def outer_obj_method(self):
+#         print("Метод внешнего экземпляра класса", self.name)
+#
+#     class MyInner:
+#         def __init__(self, inner_name, obj):
+#             self.inner_name = inner_name
+#             self.obj = obj
+#
+#
+#         def inner_method(self):
+#             print("Метод вложенного класса", MyOuter.age, self.obj.name)
+#             MyOuter.outer_static_metod()
+#             self.obj.outer_obj_method
+#
+# out = MyOuter("внешний")
+# inner = out.MyInner('внутренний', out)
+# print(out.name)
+# print(inner.inner_name)
+# inner.inner_method()
+
+# class Color:
+#     def __init__(self):
+#         self.name = "Green"
+#         self.lg = self.LightGreen()
+#
+#     def show(self):
+#         print("Name:", self.name)
+#
+#     class LightGreen:
+#         def __init__(self):
+#             self.name = "Light Green"
+#
+#         def display(self):
+#             print("Name:", self.name)
+#
+# outer = Color()
+# outer.show()
+# # print(outer.name)
+# # outer.lg.display()
+# g = outer.lg
+# g.display()
+
+# class Intern:
+#     def __init__(self):
+#         self.name = "Дмитрий"
+#
+#     def display(self):
+#         print("Name:", self.name)
+#
+# class Employee:
+#     def __init__(self):
+#         self.name = "Employee"
+#         self.intern = Intern()
+#         self.head = self.Head()
+#
+#     def show(self):
+#         print("Name:", self.name)
+#
+#
+#
+#     class Head:
+#         def __init__(self):
+#             self.name = "Александр"
+#
+#         def display(self):
+#             print("Name:", self.name)
+#
+#
+# outer = Employee()
+# outer.show()
+#
+# d1 = outer.intern
+# d2 = outer.head
+# # d1 = Employee().Intern()
+# # d2 = Employee().Head()
+# d1.display()
+# d2.display()
+
+# class Outer:
+#     def __init__(self):
+#         self.inner = self.Inner()
+#
+#     def show(self):
+#         print("Наружный класс")
+#
+#     class Inner:
+#         def __init__(self):
+#             self.inner_inner = self.InnerClass()
+#
+#         def show(self):
+#             print("Промежуточный класс")
+#
+#     class InnerClass:
+#         def show(self):
+#             print("Промежуточный класс")
+
+# outer = Outer()
+# outer.show()
+#
+# inner1 = outer.inner
+# inner1.show()
+#
+# inner2 = outer.inner.inner_inner
+# inner2.show()
 
 
-class Child(Father):
-    def display1(self):
-        print("Child Class")
+# class Computer:
+#     def __init__(self):
+#         self.name = "PC001"
+#         self.os = self.OS()
+#         self.cpu = self.CPU()
+#
+#     class OS:
+#         def syster(self):
+#             return "Windows 10"
+#
+#
+#     class CPU:
+#         def make(self):
+#             return "Intel"
+#
+#         def model(self):
+#             return "Core-i9"
+#
+#
+# comp = Computer()
+# my_os = comp.os
+# my_cpu = comp.cpu
+# print(comp.name)
+# print(my_os.syster())
+# print(my_cpu.make())
+# print(my_cpu.model())
 
 
-class GrandChild(Child):
-    def display2(self):
-        print("GrandChild Class")
+# class Base:
+#     def __init__(self):
+#         self.db = self.Inner()
+#
+#
+#     def display(self):
+#         print("In Base Class")
+#
+#     class Inner:
+#         def display1(self):
+#             print("Inner Of Base Class")
+#
+#
+# class SubClass(Base):
+#     def __init__(self):
+#         print("In Subclass")
+#         super().__init__()
+#
+#         class Inner(Base.Inner):
+#             def display1(self):
+#                 print("Inner Of Subclass")
+#
+#
+# a = SubClass()
+# # a.display()
+# # b = a.db
+# b = SubClass.Inner()
+# b.display1()
+# b.display2()
+
+# class Creature:
+#     def __init__(self, name):
+#         self.name = name
+#
+#
+# class Animal(Creature):
+#     def sleep(self):
+#         print(self.name + " is sleeping")
+#
+#
+# class Pet(Creature):
+#     def play(self):
+#         print(self.name + " is playing")
+#
+#
+# class Dog(Animal, Pet):
+#     def bark(self):
+#         print(self.name + " is barking")
+#
+#
+# dog = Dog("Buddy")
+# dog.sleep()
+# dog.play()
+# dog.bark()
+
+# class A:
+#     def __init__(self):
+#         print("Инициализатор A")
+#
+# class AA:
+#     def __init__(self):
+#         print("Инициализатор AA")
+#
+# class B(A):
+#     def __init__(self):
+#         print("Инициализатор класса B")
+#
+#
+# class C(AA):
+#     def __init__(self):
+#         print("Инициализатор класса C")
+#
+#
+# class D(B, C):
+#     def __init__(self):
+#         print("Инициализатор класса D")
+#
+#
+# d = D()
+# print(D.mro())
+# print(D.__mro__)
 
 
-gc = GrandChild
-gc.display1()
-gc.display2()
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}), ({self.__y})"
+#
+#
+# class Styles:
+#     def __init__(self, color="red", width=1):
+#         print("Инициализатор Styles")
+#         self.color = color
+#         self.width = width
+#
+#
+# class Pas:
+#     def __init__(self, sp: Point, ep: Point, *args):
+#         print("Инициализатор Pas")
+#         self.sp = sp
+#         self.ep = ep
+#         # Styles.__init__(self, *args)
+#         super().__init__(*args)
+#
+#
+# class Line(Pas, Styles):
+#     def draw(self):
+#         print(f"Рисование линии: {self.sp}, {self.ep}, {self.color},{self.width}")
+#
+#
+# l1 = Line(Point(10, 10), Point(100, 100), "green", 5)
+# l1.draw()
+
+
+# Миксины
+
+# class Displayer:
+#     @staticmethod
+#     def display(message):
+#         print(message)
+#
+# class LoggerMixin:
+#     def log(self, message, filename="log_file.txt"):
+#         with open(filename, "a") as fh:
+#             fh.write(message)
+#
+#     def display(self, message):
+#         Displayer.display(message)
+#         self.log(message)
+#
+#
+# class MySubClass(LoggerMixin, Displayer):
+#     def log(self, message, filename=""):
+#         super().log(message,filename="log.txt")
+#
+# subclass = MySubClass()
+# subclass.display("Эта строка будет печататься и записываться в файл")
+
+
+class Goods:
+    def __init__(self, name, weight, price):
+        super().__init__()
+        print("Init Goods")
+        self.name = name
+        self.weight = weight
+        self.price = price
+
+    def print_info(self):
+        print(f"{self.name}, {self.weight}, {self.price}")
+
+class MixinLog:
+    ID = 0
+
+    def __init__(self):
+        print("Init MixinLog")
+        MixinLog.ID += 1
+        self.id = MixinLog.ID
+
+    def save_sell_log(self):
+        print(f"{self.id} : товар был продан в 15:20")
+
+class NoteBook(Goods, MixinLog):
+    ...
+
+n = NoteBook("HP", 1.5, 35000)
+n.print_info()
+n.save_sell_log()
