@@ -20,4 +20,6 @@ class Student:
 
 
 stud = Student("Roman", "Vladimir")
+s = Student.Notebook()
+s.show_display()
 stud.show_display()
