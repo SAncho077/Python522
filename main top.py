@@ -3034,9 +3034,7 @@
 # print("Периметр прямоугольника", r1.get_perimetr())
 # print("Гипотенуза прямоугольника", r1.get_gypotenuse())
 # r1.get_draw()
-from idlelib.editor import keynames
-from xml.etree.ElementPath import xpath_tokenizer
-
+from stringprep import in_table_b1
 
 # class Point:
 #     __slots__ = ["x", "y", "z"]
@@ -4225,37 +4223,439 @@ from xml.etree.ElementPath import xpath_tokenizer
 # p1 = Point(5)
 # print(p1)
 
-from random import choice, random, randint
+# from random import choice, random, randint
+#
+#
+# class Cat:
+#     def __init__(self, name, age, pol):
+#         self.name = name
+#         self.age = age
+#         self.pol = pol
+#
+#     def __str__(self):
+#         if self.pol == "M":
+#             return f"{self.name} is good boy!!!"
+#         elif self.pol == "F":
+#             return f"{self.name} is good girl!!!"
+#         else:
+#             return f"{self.name} is good Kitty!!!"
+#
+#     def __repr__(self):
+#         return f"Cat(name={self.name}, age={self.age},pol={self.pol})"
+#
+#     def __add__(self, other):
+#         if self.pol != other.pol:
+#             return [Cat("No name", 0, choice(["M", "F"])) for _ in range(1,randint(2, 5))]
+#         else:
+#             raise TypeError("Types are not supported!")
+#
+#
+#
+# cat1 = Cat("Tom", 4, "M")
+# cat2 = Cat("Elsa", 5, "F")
+# cat3 = Cat("Murzik", 3, "M")
+# print(cat1)
+# print(cat2)
+# print(cat1 + cat2)
+
+# class Point:
+#     def __init__(self, *args):
+#         self.__coord = args
+#
+#     def __len__(self):
+#         return len(self.__coord)
+#
+# p = Point(1,2,3)
+# print(len(p))
+
+# import math
+#
+# class Point:
+#     __slots__ = ('x', 'y', '__length')
+#
+#     def __init__(self):
+#         self.x = x
+#         self.y = y
+#         self.length = math.sqrt(x * x + y * y)
+#
+#         @property
+#         def length(self):
+#             return self.__length
+#
+#         @length.setter
+#         def length(self, value):
+#             self.__length = value
+#
+# p1 = Point(1,2)
+#
+
+# class Point:
+#     __slots__ = ('x', 'y')
+#
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#
+#
+# class Point20:
+#
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#
+#
+# pt1 = Point(1,2)
+# pt2 = Point20(1,2)
+# print(pt1)
+# print(pt1)
+
+# class Point:
+#     __slots__ = ('x', 'y')
+#
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#
+#
+# class Point3D(Point):
+#     __slots__ = ('z',)
+#
+#     def __init__(self, x ,y, z):
+#         super().__init__(x, y)
+#         self.z = z
+#
+#
+# p = Point(1,2)
+# p3 = Point3D(10,20, 30)
+# p3.z = 30
+# print(p3.z)
+
+# class Number:
+#     def __init__(self, value):
+#         self.value = value
+#
+#     def total(self, a):
+#         return self.value + int(a)
+#
+# class Text:
+#     def __init__(self, value):
+#         self.value = value
+#
+#     def total(self, a):
+#         return len(self.value + str(a))
+#
+#
+# t1 = Number(10)
+# t2 = Text("Python")
+# print(t1.total(35))
+# print(t2.total(35))
+
+# class Animal:
+#     def __init__(self, name, age):
+#         if not isinstance(age, (int, float)):
+#             raise TypeError("int, float")
+#         self.name = name
+#         self.age = age
+#
+# class Cat(Animal):
+#     def info(self):
+#         print(f"Я кот. Меня зовут {self.name}. Мой возраст {self.age}")
+#
+#     def make_sound(self):
+#         print(f"{self.name} мяукает.")
+#
+#
+# class Animal:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#
+# class Dog(Animal):
+#     def info(self):
+#         print(f"Я собака. Меня зовут {self.name}. Мой возраст {self.age}")
+#
+#     def make_sound(self):
+#         print(f"{self.name} гавкает.")
+#
+#
+# cat = Cat("Пушок", 2.5)
+# dog = Dog("Мухтар", 4)
+#
+# for animal in cat, dog:
+#     animal.info()
+#     animal.make_sound()
+#
+#
+# a = 1, 2, 3, 4
+# print(a)
 
 
-class Cat:
-    def __init__(self, name, age, pol):
-        self.name = name
-        self.age = age
-        self.pol = pol
+# Функторы
 
-    def __str__(self):
-        if self.pol == "M":
-            return f"{self.name} is good boy!!!"
-        elif self.pol == "F":
-            return f"{self.name} is good girl!!!"
-        else:
-            return f"{self.name} is good Kitty!!!"
+# class Counter:
+#     def __init__(self):
+#         self.__count = 0
+#
+#     def __call__(self, *args, **kwargs):
+#         self.__count += 1
+#         print(self.__count)
+#
+#
+# c1 = Counter()
+# c1()
 
-    def __repr__(self):
-        return f"Cat(name={self.name}, age={self.age},pol={self.pol})"
+# def string_strip(chars):
+#     def wrap(string):
+#         if not isinstance(string, str):
+#             raise ValueError("Аргумент должен быть строкой")
+#
+#         return string_strip(chars)
+#     return wrap
+#
+#
+# s1 = string_strip("?:!.:")
+# print(s1("  HEllo world !"))
+#
+# print("   Hello WOrld! ...---   ".strip("--- . "))
+#
+#
+# class StringStrip:
+#     def __init__(self, chars):
+#         self.chars = chars
+#
+#     def __call__(self, *args, **kwargs):
+#         if not isinstance(args[0], str):
+#             raise ValueError("Аргумент должен быть строкой")
+#
+#         return args[0].strip(self.chars)
+#
+#
+# s2 = StringStrip("?:!.:")
+# print(s2("   Hello WOrld! ...---   ".strip("--- . ")))
+#
 
-    def __add__(self, other):
-        if self.pol != other.pol:
-            return [Cat("No name", 0, choice(["M", "F"])) for _ in range(1,randint(2, 5))]
-        else:
-            raise TypeError("Types are not supported!")
+
+# class MyDecorator:
+#     def __init__(self, fn):
+#         self.func = fn
+#
+#     def __call__(self):
+#         print("Перед вызовом функции")
+#         self.func()
+#         print("После вызова функции")
+#
+# @MyDecorator
+# def func():
+#     print("text")
+#
+# func()
+
+# class MyDecorator:
+#     def __init__(self, fn):
+#         self.func = fn
+#
+#     def __call__(self, a, b):
+#         # print("Перед вызовом функции")
+#         res = self.func(a, b)
+#         # print("После вызова функции")
+#         return f"Перед вызовом функции\n{res}\nПосле вызова функции"
+#
+# @MyDecorator
+# def func(a, b):
+#     return a * b
+#
+# print(func(2, 5))
+
+# class Power:
+#     def __init__(self, fn):
+#         self.func = fn
+#
+#     def __call__(self, a, b):
+#         return self.func(a, b) ** 2
+#
+# @Power
+# def mult(a, b):
+#     a * b
+#
+# print(mult(2,3))
+
+
+# class MyDecorator:
+#     def __init__(self, fn):
+#         self.func = fn
+#
+#     def __call__(self, a, b):
+#         # print("Перед вызовом функции")
+#         res = self.func(a, b)
+#         # print("После вызова функции")
+#         return f"Перед вызовом функции\n{res}\nПосле вызова функции"
+#
+# @MyDecorator
+# def func(a, b):
+#     return a * b
+#
+# @MyDecorator
+# def func1(a, b, c):
+#     return a * b * c
+#
+# print(func(2, 5))
+# print(func1(2, 5, 2))
+
+# class MyDecorator:
+# #     def __init__(self, arg): # 'test2'
+# #         self.name = arg
+# #
+# #     def __call__(self, fn): # func
+# #         def wrap(*args, **kwargs): # 2, 5
+# #             res = fn(*args, *kwargs)
+# #             return f"Перед вызовом функции\n{self.name}\n{res}\nПосле вызова функции"
+# #         return wrap
+# #
+# # @MyDecorator('text')
+# # def func(a, b):
+# #     return a * b
+# #
+# # print(func(2, 5))
+
+
+# class MyDecorator:
+#     def __init__(self, arg): # test2
+#         self.name = arg
+#
+#     def __call__(self, fn):  # func
+#         def wrap(*args, **kwargs):
+#             res = fn(*args, **kwargs)
+#             return f"Результат : {res ** self.name}"
+#
+#         return wrap
+#
+# @MyDecorator(3)
+# def func(a, b):
+#     return a * b
+#
+# print(func(2, 2))
 
 
 
-cat1 = Cat("Tom", 4, "M")
-cat2 = Cat("Elsa", 5, "F")
-cat3 = Cat("Murzik", 3, "M")
-print(cat1)
-print(cat2)
-print(cat1 + cat2)
+# Декорирование методов
+
+# def dec(fn):
+#     def wrap(*args, **kwargs):
+#         print("*" * 20)
+#         fn(*args, **kwargs)
+#         print("*" * 20)
+#     return wrap
+#
+#
+# class Person:
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     @dec
+#     def info(self):
+#         print(f"{self.name} {self.surname}")
+#
+# p1 = Person("Виталий", "Карасев")
+# p1.info()
+
+
+# Декораторы классов
+
+# def decorator(cls):
+#     class Wrapper(cls):
+#         def sample(self, value):
+#             return value * 2
+#
+#     return Wrapper
+#
+#
+# @decorator
+# class ActualClass:
+#     def __init__(self):
+#         print("Init ActualClass")
+#
+#     def method_in_class(self, value):
+#
+#         return value * 4
+#
+#
+# obj = ActualClass()
+# print(obj.method_in_class(4))
+# print(obj.sample(4))
+
+
+# Метоклассы
+
+# a = 5
+# print(type(a))
+# print(type(int))
+
+# class Mylist(list):
+#     def get_length(self):
+#         return len(self)
+
+# MyList = type(
+#     'MyList',
+#     (list,),
+#     dict(get_length=lambda self: len(self))
+# )
+#
+# lst = MyList()
+# lst.append(5)
+# lst.append(7)
+# print(lst, lst.get_length())
+
+
+# Создание модулей
+
+# class Rectangle:
+#     def __init__(self, w, h):
+#         self.w = w
+#         self.h = h
+#
+#     def get_perimeter(self):
+#         return 2 * (self.w + self.w)
+#
+#
+# class Square:
+#     def __init__(self, a):
+#         self.a = a
+#     def get_perimeter(self):
+#         return 4 * self.a
+#
+#
+# class Triangle:
+#     def __init__(self, a, b, c):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#
+#     def get_perimeter(self):
+#         return self.a + self.b + self.c
+#
+#
+
+# import geometry.rect
+# import geometry.sq
+# import geometry.trian
+
+# from geometry import rect, sq, trian
+
+from geometry import *
+
+r1 = rect.Rectangle(1,2)
+r2 = rect.Rectangle(3,4)
+
+s1 = sq.Square(10)
+s2 = sq.Square(20)
+
+t1 = trian.Triangle(1, 2, 3)
+t2 = trian.Triangle( 4, 5, 6)
+
+shape = [r1, r2, s1, s2, t1, t2]
+
+for g in shape:
+    print(g.get_perimeter())
+
