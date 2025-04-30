@@ -7,5 +7,8 @@ class Rectangle:
         return 2 * (self.w + self.w)
 
 
+__author__ = "admin"
+if __name__ == "__main__":
+    print(f"Module {__name__} (author: ")
 
 
