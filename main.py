@@ -5043,27 +5043,27 @@
 
 # import csv
 # with open("data.csv") as f:
-#     file_reader = csv.reader(f, delimiter=",") #reader - в виде списка
+#     file_reader = csv.reader(f, delimiter=",")
 #     count = 0
 #     for row in file_reader:
 #         if count == 0:
 #             print(f"Файл содержит столбцы: {', '.join(row)}")
 #         else:
-#             print(f"\t{row[0]} - {row[1]}. Родился в {row[2]} году")
+#             print(f"\t{row[0]} - {row[1]}. Родился в {row[2]} году.")
 #         count += 1
 #     print(f"Всего в файле {count} строки.")
 
 # import csv
 # with open("data.csv") as f:
 #     fields = ["Имя", "Профессия", "Год рождения"]
-#     file_reader = csv.DictReader(f, delimiter=",", fieldnames=fields) #DictReader - в виде словаря
+#     file_reader = csv.DictReader(f, delimiter=",", fieldnames=fields)
 #     count = 0
 #     for row in file_reader:
 #         if count == 0:
 #             print(f"Файл содержит столбцы: {', '.join(row)}")
-#         print(f"\t{row["Имя"]} - {row["Профессия"]}. Родился в {row["Год рождения"]} году")
+#         print(f"\t{row["Имя"]} - {row["Профессия"]}. Родился в {row["Год рождения"]} году.")
 #         count += 1
-#     print(f"Всего в файле {count + 1} строки.")
+#     print(f"Всего в файле {count} строки.")
 
 
 
@@ -5081,8 +5081,9 @@
 #         ['sw3', 'Cisco', '3650', 'Liverpool, Better str'],
 #         ['sw4', 'Cisco', '3650', 'London, Best str']]
 #
+#
 # with open("sw_data.csv", "w") as f:
-#     writer = csv.writer(f, delimiter=";", lineterminator="\r")
+#     writer = csv.writer(f, delimiter=",", lineterminator="\r")
 #     # for row in data:
 #     #     writer.writerow(row)
 #     writer.writerows(data)
@@ -5092,38 +5093,38 @@
 
 # with open("stud.csv", "w") as f:
 #     names = ["Имя", "Возраст"]
-#     file_writer = csv.DictWriter(f, delimiter=";", lineterminator="\r", fieldnames=names)
+#     file_writer = csv.DictWriter(f, delimiter=",", lineterminator="\r", fieldnames=names)
 #     file_writer.writeheader()
 #     file_writer.writerow({"Имя": "Саша", "Возраст": 6})
 #     file_writer.writerow({"Имя": "Маша", "Возраст": 15})
-#     file_writer.writerow({"Имя": "Вова", "Возраст": 16})
+#     file_writer.writerow({"Имя": "Вова", "Возраст": 14})
 
-# import csv
-# data = [{
-#     'hostname': 'sw1',
-#     'location': 'London',
-#     'model': '3750',
-#     'vendor': 'Cisco'
-# }, {
-#     'hostname': 'sw2',
-#     'location': 'Liverpool',
-#     'model': '3850',
-#     'vendor': 'Cisco'
-# }, {
-#     'hostname': 'sw3',
-#     'location': 'Liverpool',
-#     'model': '3650',
-#     'vendor': 'Cisco'
-# }, {
-#     'hostname': 'sw4',
-#     'location': 'London',
-#     'model': '3650',
-#     'vendor': 'Cisco'
-# }]
-#
-# with open("dict_writer.csv", "w") as f:
-#     writer = csv.DictWriter(f, delimiter=";", lineterminator="\r", fieldnames=data[0].keys())
-#     writer.writeheader()
-#     for d in data:
-#         writer.writerows(d)
+import csv
+data = [{
+    'hostname': 'sw1',
+    'location': 'London',
+    'model': '3750',
+    'vendor': 'Cisco'
+}, {
+    'hostname': 'sw2',
+    'location': 'Liverpool',
+    'model': '3850',
+    'vendor': 'Cisco'
+}, {
+    'hostname': 'sw3',
+    'location': 'Liverpool',
+    'model': '3650',
+    'vendor': 'Cisco'
+}, {
+    'hostname': 'sw4',
+    'location': 'London',
+    'model': '3650',
+    'vendor': 'Cisco'
+}]
+
+with open("dict_writer.csv", "w") as f:
+    writer = csv.DictWriter(f, delimiter=",", lineterminator="\r", fieldnames=data[0].keys())
+    writer.writeheader()
+    for d in data:
+        writer.writerow(d)
 
