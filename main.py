@@ -5099,32 +5099,53 @@
 #     file_writer.writerow({"Имя": "Маша", "Возраст": 15})
 #     file_writer.writerow({"Имя": "Вова", "Возраст": 14})
 
-import csv
-data = [{
-    'hostname': 'sw1',
-    'location': 'London',
-    'model': '3750',
-    'vendor': 'Cisco'
-}, {
-    'hostname': 'sw2',
-    'location': 'Liverpool',
-    'model': '3850',
-    'vendor': 'Cisco'
-}, {
-    'hostname': 'sw3',
-    'location': 'Liverpool',
-    'model': '3650',
-    'vendor': 'Cisco'
-}, {
-    'hostname': 'sw4',
-    'location': 'London',
-    'model': '3650',
-    'vendor': 'Cisco'
-}]
+# import csv
+# data = [{
+#     'hostname': 'sw1',
+#     'location': 'London',
+#     'model': '3750',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw2',
+#     'location': 'Liverpool',
+#     'model': '3850',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw3',
+#     'location': 'Liverpool',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw4',
+#     'location': 'London',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }]
+#
+# with open("dict_writer.csv", "w") as f:
+#     writer = csv.DictWriter(f, delimiter=",", lineterminator="\r", fieldnames=data[0].keys())
+#     writer.writeheader()
+#     for d in data:
+#         writer.writerow(d)
+#
 
-with open("dict_writer.csv", "w") as f:
-    writer = csv.DictWriter(f, delimiter=",", lineterminator="\r", fieldnames=data[0].keys())
-    writer.writeheader()
-    for d in data:
-        writer.writerow(d)
+import sqlite3
 
+# con = sqlite3.connect("profile.db")
+# cur = con.cursor()
+#
+# cur.execute("""""")
+# con.close()
+
+# with sqlite3.connect("profile.db") as con:
+#     cur = con.cursor()
+#     con.execute("""CREATE TABLE IF NOT EXISTS users(
+#     id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     name TEXT NOT NULL,
+#     summa REAL,
+#     date BLOB
+#     )""")
+#     cur.execute("DROP TABLE users")
+
+with open ('db2 (1).txt') as file:
+    content = file.read()
