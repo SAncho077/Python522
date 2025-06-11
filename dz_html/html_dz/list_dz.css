@@ -1,0 +1,30 @@
+.one {
+    color: red;
+}
+.two {
+    color: rgb(247, 198, 3);
+}
+.three {
+    color: green;
+}
+.four {
+    color: aqua;
+}
+.five {
+    color: purple;
+}
+.orange {
+    list-style: circle inside url(orange_marker.png);
+}
+.red {
+    list-style: circle inside url(red_marker.png);
+}
+.blue {
+    list-style: circle inside url(blue_marker.png);
+}
+.green {
+    list-style: circle inside url(green_marker.png);
+}
+.black {
+    list-style: circle inside url(black_marker.png);
+}
