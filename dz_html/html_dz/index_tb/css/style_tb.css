@@ -1,0 +1,25 @@
+body{
+    background-image: url(../img/pattern.png);
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+tr{
+    background-color: white;
+}
+th {
+    border: 1px solid black;
+    padding: 8px;
+    background-image: url(../img/tablebg.jpg);
+    background-color: white;
+}
+td{
+        border: 1px solid black;
+}
+.row{
+    background-color: rgb(159, 170, 159);
+    border: none;
+
+    
+}
