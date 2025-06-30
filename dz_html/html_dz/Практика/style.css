@@ -1,0 +1,47 @@
+.language{
+    position: absolute;
+    top: 15px;
+    right: 14px;
+}
+img{
+    float: left;
+}
+
+h3{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
+.google{
+    position: absolute;
+    top: 110px;
+    left: 10px;
+}
+table{
+    border: 2px solid aqua;
+    vertical-align: top;
+    position: absolute;
+    top: 220px;
+    left: 14px;
+    border-collapse: collapse;
+
+
+}
+td{
+    vertical-align: top;
+    bottom: 90%;
+    padding: 10px 0;
+    border-collapse: collapse;
+
+}
+.first{
+    color: blue;
+}
+.bd{
+    border-collapse: collapse;
+}
+.example{
+    color: gray;
+    font-size: 13px
+
+}
