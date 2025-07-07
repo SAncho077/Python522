@@ -178,60 +178,82 @@ body {
     background-color: rgb(243, 243, 243);
 }
 
-.clients h2 {
-    color: rgb(37, 43, 66);
-    font-family: Montserrat;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 57px;
-    letter-spacing: 0.2px;
-    text-align: center;
-}
 
-.clients_title--text {
-    color: rgb(115, 115, 115);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    text-align: center;
-}
-
-.clients__block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.clients__element {
-    flex-basis: 327px;
-    box-sizing: border-box;
-    border: 1px solid rgb(222, 222, 222);
-    border-radius: 5px;
-    background: rgb(255, 255, 255);
-    padding: 30 35;
-    margin: 30, 25;
-    margin-bottom: 30px;
-
-}
-.clients__elements--title {
-    display: flex;
-    align-items: flex-start;
-}
-
-.clients__elements--title p{
- 
-color: rgb(115, 115, 115);
-font-family: Montserrat;
-font-size: 14px;
-font-weight: 600;
-line-height: 24px;
-letter-spacing: 0.2px;
-text-align: left;
-}
-
-
-
+    .clients {
+            text-align: center;
+        }
+        
+        .clients h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #252B42;
+        }
+        
+        .clients_title--text {
+            color: #737373;
+            font-size: 16px;
+            margin-bottom: 60px;
+            line-height: 1.5;
+        }
+        
+        /* Блок с отзывами */
+        .clients__block {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .clients__element {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        /* Звезды рейтинга */
+        .clients__elements--title img {
+            width: 20px;
+            height: 20px;
+            margin-right: 3px;
+        }
+        
+        .clients__element p {
+            margin: 20px 0;
+            color: #737373;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        /* Контейнер с аватаром и текстом */
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .container img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .text h6 {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .text h6 span {
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
 
 /* team */
