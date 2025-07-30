@@ -664,3 +664,462 @@
 // js.splice(2, 0, "сложный", "язык")
 
 // js.splice(-2, 0, "но", "очень интересный")
+
+// // let str = js.join(" & ")
+// // console.log(str)
+
+// // let st = ["Фамилия", 'Имя', 'Отчество']
+// // let fio = new Array(3)
+
+// // for(let i = 0; i<fio.length; i++){
+// //     fio[i] = prompt("Введите данные:\n" + st[i])
+// // }
+
+// // alert(fio.join(" "))
+
+// // js.reverse()
+// // console.log(js);
+
+// js.sort()
+// console.log(js);
+
+// let n = [1,5,15,2]
+// n.sort((a, b) => a - b)
+
+
+
+
+// Fuction Declaration
+
+// function caption(a, b, c){
+//     return a + b + c
+// }
+
+// let test = caption()
+
+
+
+
+
+
+// function showArrayContent(arrayToShow) {
+//     if(arrayToShow.length == 1){
+//         return arrayToShow
+//     } else {
+//         let last = arrayToShow.pop()
+//         let str = arrayToShow.join(', ')
+//         let res = str + " и " + last
+//         return res
+//     }
+
+// }
+
+// // Определяем массивы.
+
+// let a = new Array('Текст');
+
+// let b = new Array('день', 'ночь');
+
+// let c = new Array('зима', 'весна', 'лета', 'осень');
+
+// alert(showArrayContent(a)); // Выводим содержимое массивов,
+
+// alert(showArrayContent(b)); // используя созданную выше функцию.
+
+// alert(showArrayContent(c));
+ 
+
+// Function Expression
+
+// let sum1 = function(a, b){
+//     return a + b
+// }
+// alert(sum1(2,3))
+
+
+
+
+// Immadiately Invoked Function Expression(IIFE) - самовызывающая функция (анонимная функция)
+
+// (function(){
+//     alert("Привет мир")
+// })(4);
+
+// (function(n){
+//     alert(n*n)
+// })(4)
+
+
+
+// Arrow Function - стрелочные функции
+
+// let test = (a, b, c) => a + b + c
+// let test = (a, b, c) => {
+//     let res = a + b + c;
+//     return res}
+
+// alert(test(10,20,30))
+
+// let hello = () => alert("Hello")
+// hello()
+
+
+// let hello = (n) => alert("Hello" + n)
+// hello("Igor")
+
+// document.writeln(Math.floor(7.9) + "<br>") - 
+// document.writeln(Math.ceil(7.9) + "<br>") +
+// document.writeln(Math.round(7.5) + "<br>") %
+ 
+
+// (function(min, max){
+// document.writeln(Math.floor(Math.random() * (max-min) + min) + "<br>")}(2,9))
+
+// document.writeln(Math.floor(Math.random()* 9) + "<br>") // от 0 до 9
+// document.writeln(Math.floor(Math.random()* 7 + 2) + "<br>") // от 2 до 9
+
+//  от 7 до 14
+// document.writeln(Math.floor(Math.random()* 7 + 7) + "<br>")
+
+
+// let randMas = ["Цикл", "Массив", "Условие", "Функция"]
+// document.writeln(pickRandom(randMas))
+
+// function pickRandom(mas){
+//     return mas[Math.floor(Math.random()*mas.length)]
+
+// }
+
+// let j = 2
+
+// if(true){
+//     i = 1
+//     console.log(i);
+// }
+
+// document.writeln("<div id='block'></div>")
+// let id = document.getElementById("block")
+
+// id.style.width = '100px'
+// id.style.height = '100px'
+// // id.style.background = 'rgb(255, 0, 0)'
+
+// let createColor = () => {
+//     let r = Math.floor(Math.random()* 256);
+//     let g = Math.floor(Math.random()* 256);
+//     let b = Math.floor(Math.random()* 256);
+    
+//     id.style.background = 'rgb('+ r +','+ g +', '+ b +')'
+// }
+
+// createColor
+
+// function test(a, b){
+//     alert("a="+a+", b="+b)
+// }
+// test(1)
+// test(1, 2)
+// test(1, 2, 3)
+
+
+// function test(){
+//     console.log(arguments[0]);
+//     console.log(arguments[1]);
+//     console.log(arguments[2]);
+    
+// }
+
+
+// test(1, 2, 3)
+
+
+// function sum(){
+//     let res = 0
+//     for(let i=0; i<arguments.length; i++){
+//         res += arguments[i]
+//     }
+//     let a = 'Hello'
+//     return (res, a)
+// }
+
+// document.writeln(sum() + "</br>")
+// document.writeln(sum(1) + "</br>")
+// document.writeln(sum(1,2) + "</br>")
+// document.writeln(sum(1,2,3) + "</br>")
+// document.writeln(sum(1,2,3,4) + "</br>")
+// document.writeln(sum(1,2,3,4,5) + "</br>")
+
+
+
+// function hello(name="незнакомец"){
+//     // name = name || "незнакомец"
+//     document.writeln("Привет, " + name + "! <br>")
+// } 
+
+// hello("Иван")
+// hello()
+
+
+// function square(width=300, height=200, fon='green'){
+//     document.writeln("<div id='shape'></div>")
+//     let div = document.querySelector("#shape")
+
+//     div.style.background = fon
+//     div.style.width = width + 'px'
+//     div.style.height = height + 'px'
+// }
+// square(50, 50, 'gold')
+// square(150, 100)
+
+
+// function hello(){
+//     alert("Привет")
+// }
+// alert(hello)
+
+// let str = "I\'m a JavaScript \"programmer\"";
+
+// document.writeln(str + "<br>")
+// document.writeln(str.length + "<br>")
+// document.writeln(str[2] + "<br>")
+
+// str[2] = "y"
+// str = str[2] + "y"
+// document.writeln(str + "<br>")
+
+
+// let s = "абббабввбабвбвббабвббабв";
+// counterLetters(s)
+
+// function counterLetters(str){
+//     let letter = ['а', 'б', 'в']
+//     for(let i = 0; i < letter.length; i++){
+//         let count = 0
+//         for(let j=0; j<str.length; j++){
+//             if(str[j] == letter[i]){
+//                 count++
+//             }
+//         }
+//         document.writeln("Символ '" + letter[i] + "'встретился " + count + "раз<br>")
+//     }
+// }
+
+// let str = "I\'m a JavaScript \"programmer\"";
+// document.writeln(str + "<br>")
+// document.writeln(str.length + "<br>")
+
+// document.writeln(str.toLocaleLowerCase + "<br>")
+// document.writeln(str.toUpperCase + "<br>")
+
+
+// let n = prompt("Введите имя", "никита")
+// alert(first(n))
+
+// function first(str){
+//     let firstLetter = str.charAt(0).toUpperCase()
+//     for(let i=1; i<str.length; i++){
+//         firstLetter += str[i]
+//     }
+//     return firstLetter
+
+// }
+
+// let str = "I\'m a JavaScript \"programmer\""
+// let str1 = 'Я учу JavaScript. Мне нравится JS'
+// str = str.concat(str1)
+// document.writeln(str + "<br>")
+
+// document.writeln(str.indexOf("JavaScript", 7)+ "<br>")
+// document.writeln(str.lastIndexOf("JavaScript", 7)+ "<br>")
+
+
+
+
+//                   let email;
+// do{
+//     email = prompt("Введите email:")
+//     if(email.indexOf("@") == -1){
+//         alert("Некорректно. Повторите операцию")
+//         continue
+//     }
+// }while(true)
+
+// alert("Спасибо за сотрудничество")
+
+
+
+// let str = "I\'m a JavaScript \"programmer\""
+// let str1 = 'Я учу JavaScript. Мне нравится JS'
+// str = str.concat(str1)
+// document.writeln(str + "<br>")
+
+// document.writeln(str.indexOf("JavaScript", 7)+ "<br>")
+// document.writeln(str.lastIndexOf("JavaScript", 7)+ "<br>")
+
+// console.log(str.split(".", 2));
+
+// document.writeln(str.slice(0,3) + "<br>")
+// document.writeln(str.substring(0,3) + "<br>")
+
+
+// let style = prompt("Введите свойства Css", "background-color")
+// alert(replace(style))
+
+// function replace(str){
+//     let mas = str.split("-")
+//     for(let i = 1; i < mas.length; i++){
+//         mas[i] = mas[i].charAt(0).toUpperCase() + mas[i].slice(1)
+//     }
+//     return mas.join('')
+// }
+
+
+
+// function loadStr(){
+//     alert("Страница была загружена")
+// }
+
+// let m = document.getElementById("mas")
+
+// function over(){
+//     m.style.color='red'
+
+// }
+
+// function out(){
+//     m.style.color='yellow'
+// }
+
+
+// function change(){
+//     let id = document.getElementById('title')
+//     id.style.color = 'blue'
+// }
+
+
+// function randomBg(){
+//     document.body.style.background='rgb('+rand()+","+rand()+","+rand()+")"
+// }
+
+// function rand(){
+//     return Math.floor(Math.random() * 256)
+// }
+
+// let image = document.getElementById("image")
+
+// function on(){
+//     image.src = "night.png"
+// }
+
+// function off(){
+//     image.src = "day.png"
+// }
+
+// let but = document.getElementById("but")
+
+// but.onclick = function(){
+//     alert("Спасибо")
+// }
+
+
+// but.onclick = hello
+// function hello(){
+//     alert("Спасибо")
+// }
+
+// function change(id){
+//     id.innerHTML = "Новый текст"
+
+// }
+
+// function setColor(elem){
+//     document.body.style.background = elem.className
+// }
+
+// let el = document.querySelector("#but")
+
+// el.addEventListener("click", function(){
+//     el.innerHTML="Новый текст"
+// })
+
+// el.addEventListener("contextmenu", setColor)
+
+// function setColor(){
+//     el.style.color = 'green'
+//     el.style.background = 'yellow'
+// }
+
+// document.addEventListener("mousemove", function(event){
+//     let c = document.querySelector("#elem")
+//     let x = event.clientX
+//     let y = event.clientY
+//     c.textContent = "X = " + x + ", Y = " + y
+
+//     c.addEventListener("dblclick", function(event){
+//         event.target.style.background = 'red'
+
+//     })
+// })
+
+
+// let el = document.querySelector("#but")
+
+// el.addEventListener("click", handler)
+
+// function handler(){
+//     alert("Спасибо")
+//     el.removeEventListener("click", handler)
+// }
+
+
+// setTimeout(функция, задержка)
+
+// setTimeout("alert('Текст')", 3000)
+
+// setTimeout(hello, 3000, "Привет", "друг")
+
+// function hello(h,n){
+//     alert(h + ", "+ n + "!")
+// }
+
+
+// document.writeln("<div id='dt'>Создание анимированного текста</div>")
+
+// let id = document.querySelector("#dt") // document.writeln("<div id='dt'>Создание анимированного текста</div>")
+// let text = document.querySelector("#dt").innerHTML // Создание анимированного текста
+
+// let i = 0;
+
+
+// window.addEventListener('load', animText)
+
+// function animText(){
+//     id.innerHTML = text.substring(0, i)
+//     i++
+//     if(i > text.length){
+//         i = 0
+//     }
+//     setTimeout(animText, 500);
+
+// }
+
+// let d =  new Date()
+// document.writeln(d + '<br>')
+// document.writeln(d.toDateString() + '<br>')
+// document.writeln(d.getFullYear() + '<br>')
+// document.writeln(d.getMonth() + '<br>') // 6, от до 11
+// document.writeln(d.getDate() + '<br>') // 23
+// document.writeln(d.getDay() + '<br>') // 3 от 0 - воскресенье, 6 - суббота
+
+
+
+let mounth = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+]
+
+let day = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота']
+
+// Сегодня: 23 июля 2025 год, Среда
+let d = new Date()
+let fullDate = "Сегодня " + d.getDate() + " " + mounth[d.getMonth()] + " " + d.getFullYear() + " год, " + day[d.getDay()] 
+
+document.writeln(fullDate)
