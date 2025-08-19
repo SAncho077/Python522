@@ -1113,13 +1113,205 @@
 
 
 
-let mounth = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
-]
+// let mounth = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+// ]
 
-let day = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота']
+// let day = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота']
 
-// Сегодня: 23 июля 2025 год, Среда
-let d = new Date()
-let fullDate = "Сегодня " + d.getDate() + " " + mounth[d.getMonth()] + " " + d.getFullYear() + " год, " + day[d.getDay()] 
+// // Сегодня: 23 июля 2025 год, Среда
+// let d = new Date()
+// let fullDate = "Сегодня " + d.getDate() + " " + mounth[d.getMonth()] + " " + d.getFullYear() + " год, " + day[d.getDay()] 
 
-document.writeln(fullDate)
+// document.writeln(fullDate)
+
+
+// document.writeln("<input typy='button' value='Start / Stop'>")
+// document.querySelector('input').addEventListener('click', startStop);
+
+// let act, run = 0
+// function startStop(){
+//     if (!run){
+//     act = setInterval(setColor, 1000)
+//     run = 1
+//     } else {
+//         clearInterval(act)
+//         run = 0
+//     }
+// }
+
+// function setColor(){
+//     let x = document.body;
+//     x.style.background = x.style.background == 'yellow' ? 'orange': "yellow";
+// }
+
+// document.writeln("<div id='text'>Здесь будет отображаться текущее время</div>")
+
+// window.addEventListener('load', () => {setInterval(time, 1000)})
+
+// function time(){
+//     let d = new Date();
+//     let hour = d.getHours();
+//     let min = d.getMinutes();
+//     let sec = d.getSeconds();
+
+//     if(min<10){
+//         min = "0" + min
+//     }
+//     if(sec<10){
+//         sec = "0" + sec
+//     }
+
+//     let times = hour + ":" + min + ":" + sec 
+    
+//     document.querySelector('#text').innerHTML = times
+
+// }
+
+
+
+// let imgTime = ['c0.gif','c1.gif','c2.gif','c3.gif','c4.gif','c5.gif','c6.gif','c7.gif','c8.gif','c9.gif',]
+
+// let t = document.querySelectorAll('#clock img')
+
+// clock();
+
+// function clock(){
+//     let time = new Date();
+//     let hours = time.getHours()
+//     let mins = time.getMinutes();
+//     let seconds = time.getSeconds();
+
+//     getImg(hours, mins, seconds);
+//     setTimeout(clock, 1000);
+// }
+
+// function getImg(h, m, s){
+//     t[0].src = imgTime[parseInt(h / 10)]
+//     t[1].src = imgTime[h % 10]
+
+//     t[3].src = imgTime[Math.floor(m / 10)]
+//     t[4].src = imgTime[m % 10]
+
+//     t[6].src = imgTime[Math.floor(s / 10)]
+//     t[7].src = imgTime[s % 10]
+// }
+
+
+// // Создаем элементы интерфейса
+// document.writeln(`
+//     <input type='text' size='4' id='timer' value='0.0'>
+//     <input type='button' value='Start/Stop'>
+//     <input type='button' value='Clear'>
+// `);
+
+// // Вешаем обработчики событий (убрали скобки после функций)
+// document.querySelector("input[value='Start/Stop']").addEventListener('click', startTimer);
+// document.querySelector("input[value='Clear']").addEventListener('click', resetTimer);
+
+// let id; // ID интервала
+// let flag = false; // Флаг состояния таймера (остановлен/запущен)
+// let tsec = 0; // Счетчик десятых долей секунды
+
+// function startTimer() {
+//     if (!flag) {
+//         // Если таймер не работает - запускаем
+//         id = setInterval(incTimer, 100);
+//     } else {
+//         // Если работает - останавливаем
+//         clearInterval(id);
+//     }
+//     flag = !flag; // Меняем состояние флага
+// }
+
+// function incTimer() {
+//     tsec++;
+//     // Форматируем время: целая часть - секунды, дробная - десятые
+//     document.getElementById('timer').value = (tsec / 10).toFixed(1);
+// }
+
+// function resetTimer() {
+//     clearInterval(id); // Останавливаем таймер
+//     document.getElementById("timer").value = "0.0";
+//     tsec = 0; // Сбрасываем счетчик
+//     flag = false; // Сбрасываем флаг
+// }
+
+
+
+// let a = document.querySelector("#cl")
+// a.addEventListener("click", myMove)
+
+// function myMove(){
+//     let elem = document.getElementById("animate")
+//     let pos = 0
+//     let id = setInterval(frame, 5)
+
+
+//     function frame(){
+//         // a.style.display='none'
+//         // a.style.visibilyti="hidden"
+
+//         if (pos == 350){
+//             // a.style.display='block'
+//             // a.style.visibilyti="hidden"
+//             a.addEventListener("click", myMove)
+//             clearInterval(id)
+//         } else {
+//             a.removeEventListener('click', myMove)
+//             pos++
+//             elem.style.top = pos + "px"
+//             elem.style.left = pos + "px"
+// }}
+// }
+
+// document.image.border = 1;
+// document.image.width = 200
+// document.writeln("<br>Ширина изображения " + document.image.width + "<br>")
+// document.writeln("<br>Высота изображения " + document.image.height + "<br>")
+
+// document.image.src = 'blue_star.png'
+
+
+// let array = new Array('2.jpg', '3.jpg', '4.jpg')
+// document.writeln("<input type='button' value='<' name='left'>")
+
+// document.writeln("<img src='"+ array[0] +"'>")
+
+// document.writeln("<input type='button' value='>' name='right'>")
+
+// document.getElementsByName('right')[0].addEventListener('click', arrowRight)
+// document.getElementsByName('left')[0].addEventListener('click', arrowLeft)
+
+// let image = document.querySelector("img")
+// let i = 0
+
+// function arrowRight(){
+//     i++
+//     if(i == array.length){
+//         i = 0
+//     }
+//     image.src = array[i]
+// }
+
+// function arrowLeft(){
+//     i--
+//     if(i < 0){
+//         i = array.length - 1
+//     }
+//     image.src = array[i]
+// }
+
+
+
+document.writeln("<input type='number' min='1' max='3'>")
+document.writeln("<input type='button' class='btn' value='Кнопка'>")
+
+let btn = document.querySelector(".btn")
+console.log(btn)
+
+btn.addEventListener("click", function(){
+    let el = document.querySelector('input').value
+    console.log(el)
+})
+
+
