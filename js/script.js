@@ -1303,15 +1303,295 @@
 
 
 
-document.writeln("<input type='number' min='1' max='3'>")
-document.writeln("<input type='button' class='btn' value='Кнопка'>")
+// document.writeln("<input type='number' min='1' max='3'>")
+// document.writeln("<input type='button' class='btn' value='Кнопка'>")
 
-let btn = document.querySelector(".btn")
-console.log(btn)
+// let btn = document.querySelector(".btn")
+// console.log(btn)
 
-btn.addEventListener("click", function(){
-    let el = document.querySelector('input').value
-    console.log(el)
+// btn.addEventListener("click", function(){
+//     let el = document.querySelector('input').value
+//     console.log(el)
+// })
+
+
+// alert(document.documentElement.innerHTML)
+// alert(document.head)
+// alert(document.body.innerHTML)
+
+// let myTitle = document.querySelector("h1").innerHTML
+// console.log(myTitle);
+
+// // let par = document.querySelector("p").firstChild.nodeValue
+// // let par = document.querySelector("h1").nodeName
+// // let par = document.querySelector("h1").nodeType
+// let par = document.querySelector("h1").firstChild.nodeType
+// console.log(par);
+
+
+// let elem = document.querySelector("#root")
+
+// let tag = document.createElement("p") // <p></p>
+// let node = document.createTextNode("Новый текст!!!"); // Новый текст!!!
+
+// tag.append(node) // <p>Новый текст!!!</p>
+
+// elem.append(tag) // добавляет новый элемент последним дочерним элементом внутри родительского
+
+// elem.prepend(tag) // добавляет новый элемент первым дочерним элементом внутри родительского
+
+// elem.before(tag) // добавляет новый элемент до выбранного id
+// elem.after(tag) // добавляет новый элемент после выбранного id
+
+// elem.replaceWith(tag) // заменяет новым элементом выбранный id
+
+// let list = document.querySelector("ul")
+
+// let newItem = document.createElement("li")
+// newItem.innerHTML = 'Новый <i>элемент списка</i>'
+
+// list.append(newItem)
+
+// document.querySelector("#move").addEventListener("click", change)
+// document.querySelector("#add").addEventListener("click", add)
+// let i = 1
+
+// function add(){
+//     let elem = document.createElement('li')
+//     elem.innerHTML = "Water" + i
+//     document.querySelector('#list2').append(elem)
+//     i++
+
+// }
+
+// function change(){
+//     let elem = document.querySelector("#list2").lastChild
+//     document.querySelector("#list1").append(elem)
+// }
+
+// let div = document.querySelector("#root")
+// div.insertAdjacentHTML("beforebegin", "<p>До выбранного элемента</p>")
+// div.insertAdjacentHTML("afterend", "<p>После выбранного элемента</p>")
+// div.insertAdjacentHTML("afterbegin", "<p>После выбранного элемента</p>")
+// div.insertAdjacentHTML("beforeend", "<p>После выбранного элемента</p>")
+
+
+// let first = document.querySelector("#p1")
+// // first.remove()
+// let second = document.querySelector("#p2")
+
+// second.after(first)
+
+// let ul = document.querySelector("ul")
+// let clone = ul.cloneNode(true)
+
+// clone.querySelector("li").innerHTML = "Начало клонируемых элементов"
+// ul.after(clone)
+
+
+// let list = document.querySelector(".list")
+// list.insertAdjacentHTML("beforebegin", "<h2>Список </h2><hr>")
+// let list_inner = document.querySelector("h2")
+// list_inner.insertAdjacentText("beforeend", "планет")
+
+// list.insertAdjacentHTML("afterend", "<hr>")
+// let hr = document.querySelectorAll("hr")[1]
+// let h4 = document.createElement("h4") // <h4></h4>
+// h4.innerHTML = "Конец списка" // h4>Конец списка</h4>
+// hr.insertAdjacentElement("afterend", h4)
+
+// let idRemove = setInterval(function(){
+//     let li = document.querySelector(".list > li:last-child")
+//     if(li === null){
+//         clearInterval(idRemove)
+//         // alert("Список удален")
+//         list.insertAdjacentHTML("afterbegin", "<li>Список удален</li>")
+//     } else{
+//         li.remove()
+//     }
+    
+// }, 500)
+
+
+// let div = document.querySelector("div")
+// div.className = "alert"
+// let activeDiv = document.querySelector(".active")
+// activeDiv.classList.add("hidden")
+// activeDiv.classList.remove("hidden")
+// activeDiv.classList.toggle("hidden")
+// activeDiv.classList.replace("active", "alert")
+
+
+// let frogImg = document.querySelector("#greenFrog")
+// console.log(frogImg.id);
+// console.log(frogImg.className);
+// console.log(frogImg.alt);
+// console.log(frogImg.title);
+// console.log(frogImg.src);
+
+// frogImg.title = 'Новый текст подсказки'
+// console.log(frogImg.getAttribute("src"));
+
+// frogImg.setAttribute("src", "4.jpg")
+// frogImg.removeAttribute('src')
+
+// console.log(frogImg.hasAttribute("src"));
+
+
+// document.form1.style.background = 'silver';
+// document.forms[0].style.padding = '16px';
+// document.forms['form1'].style.margin = '20px'
+// document.forms.form1.style.border = '2px dotted gray'
+
+// document.form1.name1.style.color = 'blue'
+// document.form1['name1'].style.background = 'aqua'
+
+// let but = document.querySelector('button')
+// let txt = document.querySelector('#text1')
+
+// but.addEventListener('click', content)
+
+// function content(){
+//     // alert(txt.value)
+//     console.log(txt.value)
+// }
+
+// let input = document.querySelectorAll('input')
+// let form1 = document.forms.form1
+
+// for(let i=0; i<form1.length; i++){
+//     input[i].addEventListener('click', checkAll)
+// }
+
+// let num 
+// function checkAll(){
+//     num = 0
+//     for(let i=0; i<form1.length; i++){
+//         if(input[i].checked && input[i].type == 'checkbox'){
+//             num++
+//         }
+//     }
+//     if(num == 3){
+//         for(let i=0; i<form1.length; i++){
+//             if(!input[i].checked && input[i].type == 'checkbox'){
+//                 input[i].disabled = true
+//             }
+//         }
+//     }else {
+//             for(let i=0; i<form1.length; i++){
+//               input[i].disabled = false  
+//             }
+//         }
+//     }
+
+
+
+
+
+
+// let input = document.querySelectorAll('input[type="checkbox"]')
+// let form1 = document.forms.form1
+
+// for(let i=0; i<input.length; i++){
+//     input[i].addEventListener('click', checkAll)
+// }
+
+// let num 
+// function checkAll(){
+//     num = 0
+//     for(let i=0; i<input.length; i++){
+//         if(input[i].checked ){
+//             num++
+//         }
+//     }
+//     if(num == 3){
+//         for(let i=0; i<input.length; i++){
+//             if(!input[i].checked ){
+//                 input[i].disabled = true
+//             }
+//         }
+//     }else {
+//             for(let i=0; i<input.length; i++){
+//               input[i].disabled = false  
+//             }
+//         }
+//     }
+
+// ДЗ
+// let choose = document.querySelector("input[type='button']")
+
+// choose.addEventListener("click", chooseColor)
+
+// function chooseColor(){
+//     let f = document.form3.radio2
+//     console.log(f.lenght)
+//     // for(let i=0; i<f.length; i++){
+//     //     if(f[i].checked){
+//     //         document.body.style.background = f[i].value
+//     //     }
+//     // }
+//     document.body.style.background = f.value
+// }
+
+
+
+/*
+свойства select:
+select.options - коллекция из подэлементов <option> (массив)
+select.value - значение выбранного в данный момент <option>
+select.selectedIndex - номер выбранного <option> (индекс)
+*/
+
+// let city = document.querySelector('#city')
+
+// city.addEventListener("change", setImage)
+
+// function setImage(){
+//     let cities = city.selectedIndex
+//     console.log(cities); // индекс
+//     let option = city.options
+//     console.log(option); // массив
+//     let code = city.value
+//     console.log(code);
+//     let div = document.querySelector("#image")
+//     div.innerHTML = "<img src='img/"+ code +".png'>"
+    
+    
+// }
+
+
+// let gas = document.querySelectorAll(".petrol")
+
+// for(let i=0; i<gas.length; i++){
+//     gas[i].addEventListener('click', function(){
+//         let gallons = document.querySelector(".gallons").value
+//         console.log(gallons);
+//         let amount = gas[i].getAttribute("data-price")
+//         console.log(amount);
+//         let res = gallons * amount
+//         console.log(res);
+//         let sum = document.querySelector(".sum")
+//         sum.innerHTML = res
+          
+//     })
+// }
+
+
+
+let reg = document.querySelector(".register")
+
+reg.addEventListener("submit", function(){
+    let login = reg.login.value
+    let pds1 = reg.password1.value
+    let pds2 = reg.password2.value
+
+    if(!(login && pds1 && pds2)){
+        alert("Все поля должны быть заполнены")
+    }
+    if(pds1 != pds2){
+        alert("Пароли не совпадают")
+    }
+    if(pds1.length<6){
+        alert("Слишком короткий пароль")
+    }
 })
-
-
