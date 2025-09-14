@@ -2181,54 +2181,338 @@ $ - конец строки (после последовательностью �
 // document.writeln(Animal.counter())
 
 
-class Header{
-    constructor(img, h1, h2,){
-        this.src = img
-        this.h1 = h1
-        this.h2 = h2
-        this.out = ``
-    }
+// class Header{
+//     constructor(img, h1, h2,){
+//         this.src = img
+//         this.h1 = h1
+//         this.h2 = h2
+//         this.out = ``
+//     }
     
-    render(id){
-        this.out = `
-            <img src="${this.src}" alt="">
-            <h1>${this.h1}</h1>
-            <h2>${this.h2}</h2>
-        `;
-        document.querySelector(`#${id}`).innerHTML = this.out
-    }
-}
+//     render(id){
+//         this.out = `
+//             <img src="${this.src}" alt="">
+//             <h1>${this.h1}</h1>
+//             <h2>${this.h2}</h2>
+//         `;
+//         document.querySelector(`#${id}`).innerHTML = this.out
+//     }
+// }
 
-class HeaderExt extends Header{
-    constructor(img, h1, h2, tel){
-        super(img, h1, h2)
-        this.tel = tel
-    }
+// class HeaderExt extends Header{
+//     constructor(img, h1, h2, tel){
+//         super(img, h1, h2)
+//         this.tel = tel
+//     }
 
-    render(id){
-        super.render(id)
-        this.out +=  `
-        <h3>${this.tel}</h3>
-        `
-        document.querySelector(`#${id}`).innerHTML = this.out
+//     get tel(){
+//         return this._tel
+//     }
+    
+//     set tel(t){
+//         let reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+//         if(reg.test(t)){
+//             this._tel = t
+//         } else {
+//             alert("Некорректный номер телефона")
+//             return;
+//         }
+//     }
 
-    }
-}
+//     render(id){
+//         super.render(id)
+//         this.out +=  `
+//         <h3>${this.tel}</h3>
+//         `
+//         document.querySelector(`#${id}`).innerHTML = this.out
+
+//     }
+// }
 
 
 
 
-let img = 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/233_Node_Js_logo-128.png'
+// let img = 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/233_Node_Js_logo-128.png'
 
-let header = new Header(img, 'Заголовок', 'Описание')
-header.render('header')
+// let header = new Header(img, 'Заголовок', 'Описание')
+// header.render('header')
 
-let img2 = 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png'
+// let img2 = 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png'
 
-let header2 = new Header(img2, 'Второй заголовок', 'Описание')
-header2.render('header2')
+// let header2 = new Header(img2, 'Второй заголовок', 'Описание')
+// header2.render('header2')
 
 
-let img3 = `https://cdn3.iconfinder.com/data/icons/web-technologies-1/154/js-javascript-monitor-pc-page-web-dynamic-128.png`
-let header3 = new HeaderExt(img3, 'Заголовок в наследнике', "Описание в классе", '+7 999 123-45-67')
-header3.render('header-ext')
+// let img3 = `https://cdn3.iconfinder.com/data/icons/web-technologies-1/154/js-javascript-monitor-pc-page-web-dynamic-128.png`
+// let header3 = new HeaderExt(img3, 'Заголовок в наследнике', "Описание в классе", '+7 999 123-45-67')
+// header3.render('header-ext')
+
+
+// let info = '{"first_name":"Ivan","age":36,"mather":{"name":"Olga"},"children":["Kate","Igor","Misha"],"married":true,"dog":null}'
+
+
+// console.log(info);
+
+// let person = JSON.parse(info)
+// console.log(person);
+// person.first_name = 'Petr'
+
+// delete(person.age)
+
+// person.work = "programmer"
+
+// // delete(person.children[1])
+
+// person.children.splice(1,1)
+// person.children.push("Ira")
+
+// for(let i in person){
+//     document.writeln(i + ": " + person[i] + "<br>")
+// }
+
+// let personString = JSON.stringify(person)
+// console.log(personString);
+
+
+
+// let request = new XMLHttpRequest();
+// request.open("GET", "data.txt") // (method, url, async, login, password)
+
+// request.send()
+// request.onreadystatechange = function(){
+//     if((request.readyState == 4) && (request.status == 200)){
+//         document.writeln(request.response)
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// let a = 'global'
+// function outer(){
+//     let b = 'outer'
+//     function inner(){
+//         let c = 'inner'
+//         console.log('c', c);
+        
+//     }
+//     inner()
+// }
+// outer()
+
+
+
+
+// function createCalc(n){
+//     return function(){
+//         console.log(10 * n);
+        
+//     }
+// }
+
+// let cal = createCalc(34)
+// // console.log(cal);
+// cal()
+
+
+// function increment(n){
+//     return function(num){
+//         return n + num
+//     }
+// }
+
+// let one = increment(1)
+// console.log(one(10));
+
+// let ten = increment(10)
+// console.log(ten(10));
+
+
+
+// function urlGenerator(domain){
+//     return function(url){
+//         return `https://${url}.${domain}`
+//     }
+// }
+
+// let ruUrl = urlGenerator("ru")
+// console.log(ruUrl('yandex'));
+
+
+// let comUrl = urlGenerator("com")
+// console.log(comUrl("youtube"));
+
+// let person = {
+//     age: 24,
+//     name: "Irina",
+//     job: "Programmer",
+//     displayinfo: function(ms){
+//         let self = this
+//         setTimeout(function(){
+//             console.log("name:", self.name);
+//             console.log("age:", self.age);
+//             console.log("job:", self.job);
+//         }, ms)
+
+//     }
+// }
+
+// person.displayinfo(2000)
+
+
+// let person = {
+//     age: 24,
+//     name: "Irina",
+//     job: "Programmer",
+//     displayinfo: function(ms){
+
+//         setTimeout(function(){
+//             console.log("name:", this.name);
+//             console.log("age:", this.age);
+//             console.log("job:", this.job);
+//         }.bind(this), ms)
+
+//     }
+// }
+
+// person.displayinfo(2000)
+
+
+
+// let person = {
+//     age: 24,
+//     name: "Irina",
+//     job: "Programmer",
+//     displayinfo: function(ms){
+
+//         setTimeout(() => {
+//             console.log("name:", this.name);
+//             console.log("age:", this.age);
+//             console.log("job:", this.job);
+//         }, ms)
+
+//     }
+// }
+
+// person.displayinfo(2000)
+
+
+
+// function first(){
+//     setTimeout(function(){
+//         console.log("Первый");
+
+//         setTimeout(function(){
+//         console.log('Второй');
+//         }, 100)
+//     }, 1000)
+    
+// }
+
+
+
+// first()
+// second()
+
+// Click => Server -> Database => Server - Client
+
+// console.log('Клиент: хочу получить список пользователей');
+// console.log('...');
+
+// setTimeout(function(){
+//     console.log('Сервер: запрашивает список пользователей в БД');
+    
+//     setTimeout(function(){
+//         console.log('БД: формирую список пользователей');
+        
+        
+//         setTimeout(function(){
+//             console.log('Сервер: трансформирую данные для клиента');
+//             console.log('...');
+            
+//             setTimeout(function(){
+//                 console.log('Клиент: получил данные  и отображаю их');
+                
+//             }, 1000)
+
+//         }, 500)
+        
+//     }, 500)
+
+// }, 1000)
+
+
+
+
+
+console.log('Клиент: хочу получить список пользователей');
+console.log('...');
+
+let promise = new Promise(function(resolve, reject){
+    setTimeout(function(){
+            console.log('Сервер: запрашивает список пользователей в БД');
+            console.log('...');
+            resolve()
+    }, 1000)
+})
+
+// promise.then(function(){
+//     setTimeout(function(){
+//                 console.log('БД: формирую список пользователей'),
+//                 console.log('...')
+//     }, 500)
+// })
+
+promise.then(function () {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            let users = [{
+                uid: "id1", name: "igor"
+            },
+            {uid:"id2", name: "Irirna"}
+        ]
+            reject("База данных не смогла получить список пользователей")
+            console.log("БД: формирую список пользователей");
+            console.log("...");
+            resolve(users);
+        }, 500);
+    })
+})
+.then(function(dbUsers){
+    return new Promise(function(resolve, reject){
+            console.log('Сервер: трансформирую данные для клиента');
+            console.log('...');
+            let users = dbUsers.map(function(user){
+                return{
+                    id: user.uid,
+                    firstName: user.name,
+                    timestamp: Date.now()
+                }
+            })
+            resolve(users)
+    }, 500)
+})
+.then(function(users){
+    return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                console.log('Клиент: получил данные  и отображаю их', users);
+                resolve()
+    }, 1000)
+})
+})
+
+.catch(function(error){
+    console.log(error);
+    
+})
+.finally(function(){
+    console.log('finally');
+    
+})
