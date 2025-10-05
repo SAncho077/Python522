@@ -1,0 +1,24 @@
+/* .footer{
+    text-align: center;
+    background: rgb(49, 174, 205);
+    color: #ffffff;
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+
+
+      margin-top: auto;
+} */
+.footer{
+    text-align: center;
+    background: rgb(49, 174, 205);
+    color: #ffffff;
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000}
