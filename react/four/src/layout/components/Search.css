@@ -40,3 +40,9 @@
     font-size: 20px;
 
 }
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
