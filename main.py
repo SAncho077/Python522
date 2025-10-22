@@ -3035,10 +3035,7 @@
 # print("Периметр прямоугольника", r1.get_perimetr())
 # print("Гипотенуза прямоугольника", r1.get_gypotenuse())
 # r1.get_draw()
-from idlelib.grep import findfiles
-from os import write
 
-from parsers import Parser
 
 
 # class Point:
@@ -5381,12 +5378,111 @@ from parsers import Parser
 # if __name__ == '__main__':
 #     main()
 
-from parsers import Parser
+# from parsers import Parser
 
 
-def main():
-    pars = Parser('https://www.ixbt.com/live/index/news/', "news.txt")
-    pars.run()
+# def main():
+#     pars = Parser('https://www.ixbt.com/live/index/news/', "news.txt")
+#     pars.run()
+#
+# if __name__ == '__main__':
+#     main()
 
-if __name__ == '__main__':
-    main()
+
+from jinja2 import Template
+
+# name = "Игорь"
+# age = 28
+#
+# tm = Template("Мне {{ a*2 }} лет. Меня зовут {{ n.upper() }}.")
+# msg = tm.render(n=name, a=age)
+#
+# print(msg)
+
+# per = {"name": "Игорь", "age": 28}
+#
+# tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p['name'] }}.")
+# msg = tm.render(p=per)
+#
+# print(msg)
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def get_name(self):
+#         return self.name
+#
+#
+# per = Person("Игорь", 28)
+#
+# # tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p['name'] }}.")
+# tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p.get_name() }}.")
+# msg = tm.render(p=per)
+#
+# print(msg)
+
+# cities = [
+#     {'id': 1, 'city': 'Москва'},
+#     {'id': 2, 'city': 'Смоленск'},
+#     {'id': 3, 'city': 'Минск'},
+#     {'id': 4, 'city': 'Воронеж'},
+#     {'id': 5, 'city': 'Ярославль'},
+# ]
+#
+# link = """
+# <select>
+# {% for c in cities %}
+#     {% if c.id > 3 %}
+#         <option value="{{ c['id'] }}">{{ c.city }}</option>
+#     {% elif c.city == 'Москва' %}
+#         {{ c.city }}
+#     {% else %}
+#         <option>{{ c.city }}</option>
+#     {% endif %}
+# {% endfor %}
+# </select>
+# """
+#
+# tm = Template(link)
+# msg = tm.render(cities=cities)
+#
+# print(msg)
+
+
+# cars = [
+#     {'model': 'Audi', 'price': 23000},
+#     {'model': 'Skoda', 'price': 17000},
+#     {'model': 'Renault', 'price': 44000},
+#     {'model': 'Wolksvagen', 'price': 21000}
+# ]
+#
+# # cars = [9, 8, 6, 5, 4, 2]
+#
+# # tpl = "{{ cs | max(attribute='price') }}"
+# tpl = "{{ (cs | max(attribute='price')).price }}"
+# tm = Template(tpl)
+# msg = tm.render(cs=cars)
+#
+# print(msg)
+
+
+html = """
+{% macro input_func(type='text', name='', placeholder='') %}
+    <input type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+
+<p> {{ input_func(name="firstname", placeholder="Имя") }} </p>
+<p> {{ input_func(name="lastname", placeholder="Фамилия") }} </p>
+<p> {{ input_func(name="address", placeholder="Адрес") }} </p>
+<p> {{ input_func(type="tel", name="phone", placeholder="Телефон") }} </p>
+<p> {{ input_func(type="email", name="email", placeholder="Почта") }} </p>
+
+"""
+
+tm = Template(html)
+msg = tm.render()
+
+print(msg)
