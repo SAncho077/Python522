@@ -5389,7 +5389,7 @@
 #     main()
 
 
-from jinja2 import Template
+# from jinja2 import Template
 
 # name = "Игорь"
 # age = 28
@@ -5468,21 +5468,60 @@ from jinja2 import Template
 # print(msg)
 
 
-html = """
-{% macro input_func(type='text', name='', placeholder='') %}
-    <input type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}">
-{% endmacro %}
+# html = """
+# {% macro input_func(type='text', name='', placeholder='') %}
+#     <input type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}">
+# {% endmacro %}
+#
+#
+# <p> {{ input_func(name="firstname", placeholder="Имя") }} </p>
+# <p> {{ input_func(name="lastname", placeholder="Фамилия") }} </p>
+# <p> {{ input_func(name="address", placeholder="Адрес") }} </p>
+# <p> {{ input_func(type="tel", name="phone", placeholder="Телефон") }} </p>
+# <p> {{ input_func(type="email", name="email", placeholder="Почта") }} </p>
+#
+# """
+#
+# tm = Template(html)
+# msg = tm.render()
+#
+# print(msg)
 
 
-<p> {{ input_func(name="firstname", placeholder="Имя") }} </p>
-<p> {{ input_func(name="lastname", placeholder="Фамилия") }} </p>
-<p> {{ input_func(name="address", placeholder="Адрес") }} </p>
-<p> {{ input_func(type="tel", name="phone", placeholder="Телефон") }} </p>
-<p> {{ input_func(type="email", name="email", placeholder="Почта") }} </p>
 
-"""
 
-tm = Template(html)
+
+
+
+# from jinja2 import Environment, FileSystemLoader
+#
+# person = [
+#     {"name": "Алексей"},
+#     {"name": "Никита"},
+#     {"name": "Виталий"},
+# ]
+#
+# file_loader = FileSystemLoader("templates")
+# env = Environment(loader=file_loader)
+#
+# tm = env.get_template("index.html")
+# msg = tm.render(users=person, title='About Jinja')
+#
+# print(msg)
+
+
+from jinja2 import Environment, FileSystemLoader
+
+person = [
+    {"name": "Алексей"},
+    {"name": "Никита"},
+    {"name": "Виталий"},
+]
+
+file_loader = FileSystemLoader("templates")
+env = Environment(loader=file_loader)
+
+tm = env.get_template("about.html")
 msg = tm.render()
 
 print(msg)
