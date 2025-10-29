@@ -1,5 +1,5 @@
 """
-URL configuration for password_generator_project project.
+URL configuration for project2 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -14,15 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
-
 from django.contrib import admin
 from django.urls import path
-from generator import views
+from dodolist import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
-    path('password/', views.password, name="psw"),
-    path('description/', views.description, name='dsc')
+    path('admin/', admin.site.urls, name='admin'),
+    path('', views.index, name='index')
+
 ]

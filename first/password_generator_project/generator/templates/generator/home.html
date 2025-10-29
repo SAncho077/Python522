@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'generator/base.html' %}
+    {% block content %}
     <h1>Генератор паролей</h1>
     <form action="{% url 'psw' %}">
         <p>
@@ -31,5 +26,4 @@
     </form>
 
     <p><a href="{% url 'dsc' %}">Описание сайта</a></p>
-</body>
-</html>
+    {% endblock %}
