@@ -1,0 +1,14 @@
+{% extends 'course/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="coursee">
+    <p>Очный или online курс</p>
+    <div class="container">
+        <div class="title_cour">{{cour.title}}</div>
+        <div class="description_cour">{{cour.descriprion}}</div>
+        <div class="price_cour">{{cour.price}} руб/мес</div>
+        <button>Оставить заявку</button>
+    </div>
+</div>
+{% endblock %}

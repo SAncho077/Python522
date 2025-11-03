@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg, #f4ffdb 0%, #e7f5c0fd 100%);
+    min-height: 100vh;
+}
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu{
+    background: aqua;
+
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+
+.content h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 36px;
+    color: #333;
+    font-weight: 600;
+}
+
+.counter {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.img {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.img img {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+}
+
+.text h2 {
+    text-align: left;
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.text p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 16px;
+}
+
+.pricing{
+    color: rgb(20, 128, 236);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.element{
+    background: white;
+    text-align: center;
+    padding: 25px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    margin-bottom: 15px;
+    background: aqua;
+    padding: 15px;
+    margin: -25px -25px 15px -25px; 
+    text-align: center;
+}
+
+.title a {
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(26, 34, 37);
+}
+
+.buy-btn {
+
+    color: rgb(26, 34, 37);
+    background: aqua;
+    padding: 15px;
+
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+
+
+}
+
+.coursee {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.coursee > p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #e9ecef;
+}
+
+
+.title_cour {
+    font-size: 25px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+}
+
+
+.description_cour {
+    font-size: 1.2rem;
+    color: #5a6c7d;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+
+.price_cour {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e74c3c;
+}
+
+
+.container button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+}

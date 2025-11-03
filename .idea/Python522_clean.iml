@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/first/password_generator_project" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/second/personal_portfolio" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dz2_django/project2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/third/todos" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dz3_django/dz" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.ven" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />

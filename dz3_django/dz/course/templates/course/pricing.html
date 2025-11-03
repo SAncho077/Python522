@@ -1,0 +1,26 @@
+{% extends 'course/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="pricing">
+    <h2>Pricing</h2>
+  </div>
+<div class="wrap">
+  <div class="content">
+    <div class="block">
+      {% for cour in course %}
+      <div class="element">
+        <div class="title"><a href="{% url 'detail' cour.id %}">{{ cour.title }}</a></div>
+        <div class="text">
+          <h2>{{cour.price}} руб/мес</h2>
+          <p>{{ cour.descriprion }}</p>
+        </div>
+        <p class="buy-btn"><a href="{% url 'detail' cour.id %}">Купить</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
