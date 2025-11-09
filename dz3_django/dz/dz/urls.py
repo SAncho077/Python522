@@ -20,6 +20,15 @@ from course import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+
+    path('signup/', views.signup_user, name='signupuser'),
+    path('logout/', views.logout_user, name='logoutuser'),
+    path('login/', views.login_user, name='loginuser'),
+
+
     path('', views.pricing, name="pricing"),
-    path('<int:cour_id>', views.detail, name='detail'),
+
+
+    path('course/<int:cour_id>/', views.detail, name='detail'),
 ]
