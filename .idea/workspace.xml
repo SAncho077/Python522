@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="664928f8-2beb-42a9-ac08-281e38665ec9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Python522_clean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python522_clean.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dz3_django/dz/course/templates/course/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dz3_django/dz/course/templates/course/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dz3_django/dz/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dz3_django/dz/course/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dz3_django/dz/dz/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dz3_django/dz/dz/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dz3_django/dz/dz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dz3_django/dz/dz/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todo/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todo/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todo/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todo/templates/todo/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todo/templates/todo/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todo/templates/todo/currenttodos.html" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todo/templates/todo/currenttodos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todo/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todos/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third/todos/todos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/third/todos/todos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/devsearch/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/devsearch/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/devsearch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/devsearch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/projects/templates/projects/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/projects/templates/projects/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/projects/templates/projects/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/projects/templates/projects/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/projects/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fourth/devsearch/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fourth/devsearch/projects/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.jinja1_dz.executor&quot;: &quot;Run&quot;,
-    &quot;Python.jinja_dz2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/python top/Python522_clean/fourth/devsearch/media&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.jinja1_dz.executor": "Run",
+    "Python.jinja_dz2.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/python top/Python522_clean/fourth/devsearch/users/templates/users",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\python top\Python522_clean\fourth\devsearch\users\templates\users" />
+      <recent name="C:\python top\Python522_clean\fourth\devsearch\media\profiles" />
+      <recent name="C:\python top\Python522_clean\fourth\devsearch\projects\templates\projects" />
       <recent name="C:\python top\Python522_clean\fourth\devsearch\media" />
       <recent name="C:\python top\Python522_clean\dz3_django\dz\course\static\course" />
-      <recent name="C:\python top\Python522_clean\second\personal_portfolio\skills\static\skills" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\python top\Python522_clean\fourth\devsearch\projects\static" />
