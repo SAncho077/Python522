@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/third/todos" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dz3_django/dz" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/fourth/devsearch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/top_project/project" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.ven" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
